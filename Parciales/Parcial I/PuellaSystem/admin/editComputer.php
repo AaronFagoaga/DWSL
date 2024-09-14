@@ -1,4 +1,9 @@
 <?php
+session_start();
+if ($_SESSION['user'] == "") {
+    header("Location: ../index.php");
+}
+
 include_once("../conf/conf.php");
 
 $computerID = $_GET['computerID'];
